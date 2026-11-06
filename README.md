@@ -23,10 +23,14 @@ Open http://127.0.0.1:5173. The local password is `pay-ledger` until you set `HR
 ```bash
 npm test
 npm run build
-HR_PASSWORD=pay-ledger npm start
 ```
 
-After `npm run build`, `npm start` serves the UI and the API together on port 3001.
+After `npm run build`, `npm start` serves the UI and the API together on port 3001. Production will not boot until `HR_PASSWORD` is set.
+
+```powershell
+$env:HR_PASSWORD = "pay-ledger"
+npm start
+```
 
 ## Demo script
 
